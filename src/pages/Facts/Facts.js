@@ -2,10 +2,13 @@ import React, { useEffect, useState } from "react";
 import Axios from "axios";
 import Badge from "react-bootstrap/Badge";
 import "./Facts.css";
+import FactCard from "../../components/FactCard/FactCard";
+import imageLeft from "../../assets/images/chuck-left.png";
+import imageRight from "../../assets/images/chuck-right.png";
 
 const Facts = () => {
   const [categories, setCategories] = useState([]);
-  const facts = [];
+  const [facts, setFacts] = useState([]);
 
   useEffect(() => {
     Axios({
@@ -22,8 +25,7 @@ const Facts = () => {
       url: `https://api.chucknorris.io/jokes/random?category=${category}`,
     })
       .then((response) => {
-        facts.push(response.data.value);
-        console.log(facts);
+        setFacts([...facts, response.data]);
       })
       .catch((error) => {
         console.error(error);
@@ -31,7 +33,7 @@ const Facts = () => {
   };
 
   return (
-    <div>
+    <div className="facts-main-container">
       <div className="badges-container">
         {categories.map((category) => (
           <Badge
@@ -44,6 +46,20 @@ const Facts = () => {
             {category}
           </Badge>
         ))}
+      </div>
+
+      <div className="facts-container">
+        <div className="image-facts">
+          <img src={imageLeft} alt="chuck-fighting" />
+        </div>
+        <div className="facts">
+          {facts.map((fact) => (
+            <FactCard category={fact.categories[0]} text={fact.value} />
+          ))}
+        </div>
+        <div className="image-facts">
+          <img src={imageRight} alt="chuck-fighting" />
+        </div>
       </div>
     </div>
   );

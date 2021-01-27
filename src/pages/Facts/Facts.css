@@ -1,12 +1,26 @@
+.facts-main-container {
+  background-color: #343a40;
+  height: auto;
+  min-height: 100vh;
+}
 .badges-container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin: 40px 90px;
 }
-
 .badge {
   cursor: pointer;
   margin: 10px;
   padding: 10px;
+}
+.facts-container {
+  display: flex;
+  justify-content: center;
+}
+.image-facts {
+  min-width: 25%;
+  margin: 20px;
+}
+.image-facts img {
+  width: 100%;
 }
