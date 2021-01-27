@@ -4,8 +4,17 @@
   font-weight: 700;
   font-size: 36px;
   font-size: 2.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .card {
   margin: 30px 5%;
+}
+
+.icon {
+  cursor: pointer;
+  color: #343a40;
+  padding-bottom: 10px;
 }
