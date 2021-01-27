@@ -1,0 +1,13 @@
+.container-image {
+  background-image: url("../../assets/images/background-image.jpg");
+  height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.shadow-container-image {
+  background-color: rgba(0, 0, 0, 0.3);
+  height: 100vh;
+}

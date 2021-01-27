@@ -1,0 +1,25 @@
+.home-container {
+  background-color: #343a40;
+  display: flex;
+  color: white;
+}
+
+.image {
+  margin-top: 200px;
+  margin-right: 50px;
+}
+
+h1 {
+  background-image: url(../../assets/images/fondo-h1.png);
+  color: white;
+  margin: 0px;
+  text-align: center;
+  padding: 40px;
+}
+
+h1 span {
+  color: black;
+  display: block;
+  font-size: 4rem;
+  font-weight: 900;
+}
