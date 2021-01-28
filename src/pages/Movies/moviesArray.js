@@ -12,20 +12,59 @@ import trial from "../../assets/images/movies/trial-by-fire.jpg";
 import walkerTexas from "../../assets/images/movies/walker-texas.jpg";
 import dragon from "../../assets/images/movies/way-of-the-dragon.jpg";
 
-const images = [
-  deadlyReunion,
-  expendables,
-  forceOfOne,
-  goodGuys,
-  logans,
-  martialLaw,
-  presidentsMan,
-  presidentsMan2,
-  slaughter,
-  cutter,
-  trial,
-  walkerTexas,
-  dragon,
+const arrayMovies = [
+  {
+    img: expendables,
+    title: "EXPENDABLES 2",
+  },
+  {
+    img: deadlyReunion,
+    title: "DEADLY REUNION",
+  },
+  {
+    img: forceOfOne,
+    title: "FORCE OF ONE",
+  },
+  {
+    img: goodGuys,
+    title: "GOOD GUYS WEAR BLACK",
+  },
+  {
+    img: logans,
+    title: "LOGANS WAR",
+  },
+  {
+    img: martialLaw,
+    title: "MARTIAL LAW",
+  },
+  {
+    img: presidentsMan,
+    title: "THE PRESIDENTS MAN",
+  },
+  {
+    img: presidentsMan2,
+    title: "THE PRESIDENTS MAN 2",
+  },
+  {
+    img: slaughter,
+    title: "SLAUGHTER IN SAN FRANCISCO",
+  },
+  {
+    img: cutter,
+    title: "THE CUTTER",
+  },
+  {
+    img: trial,
+    title: "WALKER, TEXAS RANGER - TRAIL BY FIRE",
+  },
+  {
+    img: walkerTexas,
+    title: "WALKER, TEXAS RANGER",
+  },
+  {
+    img: dragon,
+    title: "THE WAY OF THE DRAGON",
+  },
 ];
 
-export default images;
+export default arrayMovies;

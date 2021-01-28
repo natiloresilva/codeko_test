@@ -23,3 +23,15 @@ h1 span {
   font-size: 4rem;
   font-weight: 900;
 }
+
+@media (max-width: 960px) {
+  .image {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .home-container {
+    /* display: none; */
+  }
+}

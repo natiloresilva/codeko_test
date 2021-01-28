@@ -10,3 +10,14 @@
 .description {
   margin: 10px 150px;
 }
+
+@media (max-width: 576px) {
+  .title {
+    margin: 30px 5%;
+    text-align: center;
+  }
+  .description {
+    margin: 5%;
+    text-align: center;
+  }
+}

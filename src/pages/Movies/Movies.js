@@ -38,13 +38,15 @@ function Movies() {
 
   return (
     <div className="container-movies">
+      <h2 className="title poppins title-page">CHUCK NORRIS MOVIES</h2>
       <div className="container-slider">
         <Slider {...settings}>
-          {movies.map((img, index) => (
+          {movies.map((movie, index) => (
             <div
               className={index === imageIndex ? "slide activeSlide" : "slide"}
             >
-              <img key={index} src={img} alt={img} />
+              <img key={index} src={movie.img} alt={movie.title} />
+              <p className="movie-title poppins">{movie.title}</p>
             </div>
           ))}
         </Slider>
