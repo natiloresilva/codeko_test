@@ -66,16 +66,18 @@ const Facts = () => {
           </Badge>
         ))}
       </div>
-      <div className="badge-delete-container">
-        <Badge
-          className="badge"
-          pill
-          variant="light"
-          onClick={() => deleteAllFacts()}
-        >
-          Delete All
-        </Badge>
-      </div>
+      {facts.length > 0 ? (
+        <div className="badge-delete-container">
+          <Badge
+            className="badge"
+            pill
+            variant="light"
+            onClick={() => deleteAllFacts()}
+          >
+            Delete All
+          </Badge>
+        </div>
+      ) : null}
 
       <div className="facts-container">
         <div className="image-facts">

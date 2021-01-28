@@ -27,3 +27,9 @@
 .badge-delete-container {
   text-align: center;
 }
+
+@media (max-width: 720px) {
+  .image-facts {
+    display: none;
+  }
+}
