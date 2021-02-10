@@ -24,16 +24,16 @@ const Facts = () => {
     setFacts(JSON.parse(localStorage.getItem("facts")) || []);
   }, []);
 
+  useEffect(() => {
+    localStorage.setItem("facts", JSON.stringify(facts));
+  }, [facts]);
+
   const getFactCategory = (category) => {
     Axios({
       url: `https://api.chucknorris.io/jokes/random?category=${category}`,
     })
       .then((response) => {
         setFacts([...facts, response.data]);
-        localStorage.setItem(
-          "facts",
-          JSON.stringify([...facts, response.data])
-        );
       })
       .catch((error) => {
         console.error(error);
@@ -43,12 +43,10 @@ const Facts = () => {
   const handleDelete = (key) => {
     const removeFacts = facts.filter((fact) => fact.id !== key);
     setFacts(removeFacts);
-    localStorage.setItem("facts", JSON.stringify(removeFacts));
   };
 
   const deleteAllFacts = () => {
     setFacts([]);
-    localStorage.removeItem("facts");
   };
 
   return (

@@ -3,12 +3,14 @@ import { Nav, Navbar } from "react-bootstrap";
 import logo from "../../assets/images/hat.png";
 import Image from "react-bootstrap/Image";
 
-const NavBar = () => {
+const NavBar = (props) => {
+  const { location } = props;
+
   return (
     <div>
       <Navbar bg="dark" variant="dark">
         <Image src={logo} className="logo" />
-        <Nav className="justify-content-end" activeKey="/">
+        <Nav className="justify-content-end" activeKey={location.pathname}>
           <Nav.Item>
             <Nav.Link href="/">Home</Nav.Link>
           </Nav.Item>
